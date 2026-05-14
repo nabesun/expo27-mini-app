@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { WEATHER_API, WEATHER_CACHE_TTL } from "../config";
+import { getTodayJST } from "../utils/dateJST";
 import type { WeatherData, WeatherDaily } from "../types";
 
 const CACHE_KEY = "weather_cache";
@@ -10,14 +11,17 @@ export function useWeather() {
   const [error, setError] = useState<string | null>(null);
 
   const fetchWeather = useCallback(async () => {
-    // キャッシュ確認
+    // キャッシュ確認：経過時間 AND 日付（JST）が今日のデータかを両方チェック
     const cached = localStorage.getItem(CACHE_KEY);
     if (cached) {
       const parsed = JSON.parse(cached) as WeatherData;
-      if (Date.now() - parsed.fetchedAt < WEATHER_CACHE_TTL) {
+      const isFresh   = Date.now() - parsed.fetchedAt < WEATHER_CACHE_TTL;
+      const isToday   = parsed.daily[0]?.date === getTodayJST(); // ← 日付変わりを検知
+      if (isFresh && isToday) {
         setData(parsed);
         return;
       }
+      // 日付が変わっていたら古いキャッシュを破棄して再取得
     }
 
     setLoading(true);

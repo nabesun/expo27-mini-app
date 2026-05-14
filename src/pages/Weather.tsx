@@ -4,6 +4,7 @@ import { useWeather } from "../hooks/useWeather";
 import { API } from "../config";
 import type { CongestionData } from "../types";
 import { getWeatherInfo, CONGESTION_COLOR } from "../utils/weatherCode";
+import { getTodayJST } from "../utils/dateJST";
 import { CongestionBar } from "../components/CongestionBar";
 import { SkeletonCard } from "../components/SkeletonCard";
 import { OfflineBanner } from "../components/OfflineBanner";
@@ -38,7 +39,19 @@ function Header() {
   );
 }
 
-const DAY_LABELS = ["今日", "明日", "明後日"];
+/**
+ * APIが返す日付文字列（YYYY-MM-DD, JST）と今日を比較してラベルを返す。
+ * インデックス固定ではなく日付照合にすることで、
+ * 日付変わり際のキャッシュズレでも正確なラベルを表示する。
+ */
+function getDayLabel(dateStr: string): string {
+  const today    = getTodayJST();                        // "2026-05-15"
+  const tomorrow = new Intl.DateTimeFormat("sv", { timeZone: "Asia/Tokyo" })
+    .format(new Date(Date.now() + 86400000));            // "2026-05-16"
+  if (dateStr === today)    return "今日";
+  if (dateStr === tomorrow) return "明日";
+  return "明後日";
+}
 
 export function Weather() {
   const { data: weather, loading, error: weatherError } = useWeather();
@@ -75,7 +88,7 @@ export function Weather() {
                     flex: 1, textAlign: "center", padding: "8px 4px",
                     borderRight: i < weather.daily.length - 1 ? "1px solid #f3f4f6" : "none",
                   }}>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: "#2d7a4f" }}>{DAY_LABELS[i] ?? d.date}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#2d7a4f" }}>{getDayLabel(d.date)}</div>
                     <div style={{ fontSize: 10, color: "#9ca3af", marginBottom: 6 }}>
                       {(dateObj.getMonth() + 1)}/{dateObj.getDate()}({["日","月","火","水","木","金","土"][dateObj.getDay()]})
                     </div>

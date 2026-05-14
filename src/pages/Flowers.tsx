@@ -3,6 +3,7 @@ import { useMtJson } from "../hooks/useMtJson";
 import { API } from "../config";
 import type { FlowerItem } from "../types";
 import { getBloomStatus, getFlowersByMonth, BLOOM_BADGE } from "../utils/bloomCalc";
+import { todayJST } from "../utils/dateJST";
 import { FlowerCard } from "../components/FlowerCard";
 import { SkeletonCard } from "../components/SkeletonCard";
 import { OfflineBanner } from "../components/OfflineBanner";
@@ -29,7 +30,7 @@ function Header() {
 }
 
 export function Flowers() {
-  const today = new Date();
+  const today = todayJST(); // JST固定
   const [activeMonth, setActiveMonth] = useState<number>(today.getMonth() + 1 < 3 ? 3 : Math.min(today.getMonth() + 1, 9));
 
   const { data: flowers, status, lastFetchedAt } = useMtJson<FlowerItem[]>(API.flowers, "flowers");

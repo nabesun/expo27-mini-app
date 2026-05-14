@@ -5,6 +5,7 @@ import { API, EXPO_START, EXPO_END, EXPO_TOTAL_DAYS } from "../config";
 import type { NewsItem, FlowerItem, CongestionData } from "../types";
 import { getBloomStatus, BLOOM_BADGE } from "../utils/bloomCalc";
 import { CONGESTION_COLOR } from "../utils/weatherCode";
+import { todayJST } from "../utils/dateJST";
 import { WeatherWidget } from "../components/WeatherWidget";
 import { CongestionBar } from "../components/CongestionBar";
 import { SkeletonCard } from "../components/SkeletonCard";
@@ -28,7 +29,7 @@ function Card({ children, style = {} }: { children: React.ReactNode; style?: Rea
 
 export function Home() {
   const navigate = useNavigate();
-  const today = new Date();
+  const today = todayJST(); // JST固定（システムTZに依存しない）
 
   // 開催状況バナー計算
   const daysUntil = Math.ceil((EXPO_START.getTime() - today.getTime()) / 86400000);
