@@ -1,0 +1,86 @@
+{
+  "food": [
+    {
+      "id": "food-01",
+      "name": "グリーンカフェ テラス",
+      "type": "food",
+      "area": "メインゲート周辺",
+      "openHours": "9:00〜18:00",
+      "priceRange": "¥700〜1,500",
+      "vegetarianMenu": true,
+      "accessible": true,
+      "babyroom": false,
+      "note": "横浜野菜を使ったサンドイッチが人気"
+    },
+    {
+      "id": "food-02",
+      "name": "里山キッチン",
+      "type": "food",
+      "area": "里山エリア中央",
+      "openHours": "10:00〜17:00",
+      "priceRange": "¥500〜1,200",
+      "vegetarianMenu": false,
+      "accessible": true,
+      "babyroom": true,
+      "note": "屋外テラス席あり"
+    },
+    {
+      "id": "food-03",
+      "name": "はなまるマルシェ",
+      "type": "food",
+      "area": "中央広場",
+      "openHours": "9:00〜18:30",
+      "priceRange": "¥300〜800",
+      "vegetarianMenu": true,
+      "accessible": true,
+      "babyroom": false,
+      "note": "軽食・スイーツ中心"
+    }
+  ],
+  "facilities": [
+    {
+      "id": "toilet-01",
+      "name": "多目的トイレ A棟",
+      "type": "toilet",
+      "area": "メインゲート",
+      "accessible": true,
+      "babyroom": true
+    },
+    {
+      "id": "toilet-02",
+      "name": "多目的トイレ B棟",
+      "type": "toilet",
+      "area": "中央広場",
+      "accessible": true,
+      "babyroom": true,
+      "note": "オストメイト対応"
+    },
+    {
+      "id": "toilet-03",
+      "name": "トイレ 里山エリア",
+      "type": "toilet",
+      "area": "里山エリア",
+      "accessible": true,
+      "babyroom": false
+    },
+    {
+      "id": "rest-01",
+      "name": "休憩所 中央",
+      "type": "rest",
+      "area": "中央広場",
+      "openHours": "9:00〜18:30",
+      "accessible": true,
+      "note": "Wi-Fi・充電スポットあり"
+    }
+  ],
+  "firstaid": [
+    {
+      "id": "aid-01",
+      "name": "救護所（メイン）",
+      "type": "firstaid",
+      "area": "中央広場付近",
+      "accessible": true,
+      "note": "会場内緊急電話 #100"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "lastUpdated": "2027-04-01T09:00:00+09:00",
+  "isMock": true,
+  "overall": 2,
+  "overallLabel": "やや混雑",
+  "gates": {
+    "メインゲート": { "level": 3, "label": "混雑", "waitMinutes": 15 },
+    "北ゲート": { "level": 1, "label": "空いている", "waitMinutes": 3 },
+    "南ゲート": { "level": 2, "label": "やや混雑", "waitMinutes": 8 }
+  },
+  "hotspots": [
+    { "name": "ローズガーデン", "level": 3, "label": "混雑" },
+    { "name": "テーマ館", "level": 2, "label": "やや混雑" },
+    { "name": "里山エリア", "level": 1, "label": "空いている" }
+  ],
+  "forecast": [
+    { "time": "9:00",  "level": 1 },
+    { "time": "10:00", "level": 2 },
+    { "time": "11:00", "level": 3 },
+    { "time": "12:00", "level": 4 },
+    { "time": "13:00", "level": 4 },
+    { "time": "14:00", "level": 3 },
+    { "time": "15:00", "level": 2 },
+    { "time": "16:00", "level": 2 },
+    { "time": "17:00", "level": 1 }
+  ]
+}

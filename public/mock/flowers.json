@@ -1,0 +1,72 @@
+[
+  {
+    "id": "tulip",
+    "name": "チューリップ",
+    "nameEn": "Tulip",
+    "emoji": "🌷",
+    "bloomStart": "03-20",
+    "bloomEnd": "04-20",
+    "peakStart": "03-28",
+    "peakEnd": "04-10",
+    "location": "フラワーガーデンゾーン 北エリア",
+    "description": "約50万球が一面に広がる春の主役。色とりどりの品種が揃う。",
+    "tip": "朝9〜11時が花が最も開いていて写真映えします",
+    "sortOrder": 1
+  },
+  {
+    "id": "rose",
+    "name": "バラ",
+    "nameEn": "Rose",
+    "emoji": "🌹",
+    "bloomStart": "05-01",
+    "bloomEnd": "06-15",
+    "peakStart": "05-10",
+    "peakEnd": "05-31",
+    "location": "ローズガーデン",
+    "description": "約3,000品種・2万株。日本最大級のバラ園を目指す。",
+    "tip": "夕方16時以降は照明で幻想的な雰囲気に",
+    "sortOrder": 2
+  },
+  {
+    "id": "hydrangea",
+    "name": "アジサイ",
+    "nameEn": "Hydrangea",
+    "emoji": "💠",
+    "bloomStart": "06-01",
+    "bloomEnd": "07-10",
+    "peakStart": "06-10",
+    "peakEnd": "06-25",
+    "location": "里山エリア 斜面",
+    "description": "雨に映える日本の梅雨を代表する花。100品種以上。",
+    "tip": "雨上がりの朝が最も美しい",
+    "sortOrder": 3
+  },
+  {
+    "id": "sunflower",
+    "name": "ヒマワリ",
+    "nameEn": "Sunflower",
+    "emoji": "🌻",
+    "bloomStart": "07-15",
+    "bloomEnd": "08-31",
+    "peakStart": "07-20",
+    "peakEnd": "08-10",
+    "location": "サンフラワーフィールド",
+    "description": "夏空を背景に一面に広がる2万本。",
+    "tip": "午前中は花が東（入口側）を向いています",
+    "sortOrder": 4
+  },
+  {
+    "id": "cosmos",
+    "name": "コスモス",
+    "nameEn": "Cosmos",
+    "emoji": "🌸",
+    "bloomStart": "09-01",
+    "bloomEnd": "09-26",
+    "peakStart": "09-10",
+    "peakEnd": "09-20",
+    "location": "コスモスの丘",
+    "description": "閉幕を彩る秋桜。会場の丘一面がピンクに染まる。",
+    "tip": "秋の夕暮れ時がとくに美しい",
+    "sortOrder": 5
+  }
+]

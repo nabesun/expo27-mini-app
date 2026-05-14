@@ -1,0 +1,26 @@
+[
+  {
+    "id": "news-001",
+    "title": "チューリップ祭り 開催のお知らせ",
+    "url": "https://expo2027yokohama.or.jp/news/tulip-festival/",
+    "category": "イベント",
+    "publishedAt": "2027-03-25T10:00:00+09:00",
+    "excerpt": "4月上旬より約50万球のチューリップが見頃を迎えます。特別ガイドツアーも開催。"
+  },
+  {
+    "id": "news-002",
+    "title": "ゴールデンウィーク期間中の混雑予測について",
+    "url": "https://expo2027yokohama.or.jp/news/gw-congestion/",
+    "category": "お知らせ",
+    "publishedAt": "2027-04-20T09:00:00+09:00",
+    "excerpt": "4/29〜5/6はピーク混雑が予想されます。早朝入場または北ゲート利用をお勧めします。"
+  },
+  {
+    "id": "news-003",
+    "title": "テーマ館「未来の庭」 特別ナイトイベント開催決定",
+    "url": "https://expo2027yokohama.or.jp/news/night-event/",
+    "category": "イベント",
+    "publishedAt": "2027-03-22T12:00:00+09:00",
+    "excerpt": "毎週金・土曜日の夜間特別開館を実施。ライトアップされた幻想的な庭園をお楽しみください。"
+  }
+]

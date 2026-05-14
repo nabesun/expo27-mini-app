@@ -1,0 +1,26 @@
+[
+  {
+    "id": "event-001",
+    "title": "チューリップガイドツアー",
+    "url": "https://expo2027yokohama.or.jp/events/tulip-tour/",
+    "startDate": "2027-03-28",
+    "endDate": "2027-04-10",
+    "startTime": "10:00",
+    "venue": "フラワーガーデンゾーン 北エリア",
+    "category": "ガイドツアー",
+    "isFree": false,
+    "excerpt": "専門ガイドと一緒に50万球のチューリップを巡るツアー。品種の解説も行います。"
+  },
+  {
+    "id": "event-002",
+    "title": "こどもワークショップ「花の押し花づくり」",
+    "url": "https://expo2027yokohama.or.jp/events/workshop-pressedflower/",
+    "startDate": "2027-04-01",
+    "endDate": "2027-09-26",
+    "startTime": "11:00",
+    "venue": "テーマ館 ワークショップルーム",
+    "category": "ワークショップ",
+    "isFree": false,
+    "excerpt": "会場で摘んだ花を使った押し花体験。毎日11:00・14:00の2回開催。"
+  }
+]
