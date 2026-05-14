@@ -51,7 +51,7 @@ export function Notebook() {
   };
 
   return (
-    <div style={{ paddingBottom: 80 }}>
+    <div style={{ paddingBottom: 16 }}>
       <Header />
       <div style={{ padding: "16px" }}>
 
@@ -189,12 +189,12 @@ export function Notebook() {
         )}
       </div>
 
-      {/* FAB */}
+      {/* FAB — sticky でスクロール領域の末尾に追従 */}
       {!showForm && (
+        <div style={{ position: "sticky", bottom: 16, display: "flex", justifyContent: "flex-end", padding: "0 16px" }}>
         <button
           onClick={() => setShowForm(true)}
           style={{
-            position: "fixed", bottom: 88, right: "calc(50% - 195px + 16px)",
             width: 52, height: 52, borderRadius: "50%", background: "#2d7a4f",
             border: "none", color: "#fff", fontSize: 28, cursor: "pointer",
             boxShadow: "0 4px 16px rgba(45,122,79,.4)",
@@ -204,6 +204,7 @@ export function Notebook() {
         >
           +
         </button>
+        </div>
       )}
     </div>
   );

@@ -54,7 +54,7 @@ export function Home() {
   const todayWeather = weather?.daily[0];
 
   return (
-    <div style={{ paddingBottom: 80 }}>
+    <div style={{ paddingBottom: 16 }}>
       {/* フォールバックバナー */}
       {newsStatus === "fallback" && <OfflineBanner lastFetchedAt={newsAt} />}
       {congStatus === "fallback" && <OfflineBanner lastFetchedAt={congAt} />}

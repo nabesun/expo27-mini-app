@@ -14,8 +14,9 @@ export function BottomNav() {
 
   return (
     <div style={{
-      position: "fixed", bottom: 0, left: "50%", transform: "translateX(-50%)",
-      width: 390, background: "rgba(255,255,255,.96)", backdropFilter: "blur(12px)",
+      /* position: fixed を外してフレーム（flex column）の末尾に固定する */
+      flexShrink: 0,
+      background: "rgba(255,255,255,.96)", backdropFilter: "blur(12px)",
       borderTop: "1px solid #e5e7eb", display: "flex", zIndex: 200,
     }}>
       {NAV_ITEMS.map((item) => {

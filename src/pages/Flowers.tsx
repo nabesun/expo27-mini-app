@@ -39,7 +39,7 @@ export function Flowers() {
   const monthFlowers   = flowers?.filter((f) => monthFlowerIds.includes(f.id)) ?? [];
 
   return (
-    <div style={{ paddingBottom: 80 }}>
+    <div style={{ paddingBottom: 16 }}>
       <Header />
       {status === "fallback" && <OfflineBanner lastFetchedAt={lastFetchedAt} />}
 

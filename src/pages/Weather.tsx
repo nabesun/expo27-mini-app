@@ -63,7 +63,7 @@ export function Weather() {
     .map((f) => f.time) ?? [];
 
   return (
-    <div style={{ paddingBottom: 80 }}>
+    <div style={{ paddingBottom: 16 }}>
       <Header />
       {congStatus === "fallback" && <OfflineBanner lastFetchedAt={congAt} />}
 
